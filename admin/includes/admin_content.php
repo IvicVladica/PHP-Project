@@ -30,11 +30,24 @@
 
         // $user->update();
 
-        
 
-        $user = User::find_user_by_id(7);
-        $user->delete();
-       
+
+        // $user = User::find_user_by_id(16);
+        // $user->delete();
+
+
+
+        // $user = User::find_user_by_id(16);
+        // $user->username = "username1";
+        // $user->password = "password1";
+        // $user->first_name = "fn1";
+        // $user->last_name = "ln1";
+        // $user->save();
+
+        // $user = new User();
+        // $user->username = "SaveProbaNewUser2";
+        // $user->password = "SaveProbaNewPassword2";
+        // $user->save();
 
         ?>
 
