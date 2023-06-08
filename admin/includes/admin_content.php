@@ -11,32 +11,15 @@
 
 
         <?php
-        
-    //    $result_set = User::find_all_users();
 
-    //    while($row = mysqli_fetch_array($result_set)) {
+        $user = new User();
 
-    //     echo $row['username'] . "<br>";
+        $user->username = "username2";
+        $user->password = "password2";
+        $user->first_name = "John";
+        $user->last_name = "McConel";
 
-    //     }
-
-    //    $found_user = User::find_user_by_id(2);
-
-    //    $user = User::instantiation($found_user);
-       
-    //     echo $user->id;
-
-        $users = User::find_all_users();
-
-        foreach($users as $user) {
-            echo $user->username . "<br>";
-        }
-
-        
-        $found_user = User::find_user_by_id(2);
-        echo $found_user->username;
-
-
+        $user->create();
 
         ?>
 
