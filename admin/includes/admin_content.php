@@ -23,7 +23,8 @@
 
 
 
-        // $user = User::find_user_by_id(6);
+        // $photo = Photo::find_by_id(4);
+        // echo $photo->title;
 
         // $user->first_name = "JohnUpdated";
         // $user->last_name = "McConelUpdated";
