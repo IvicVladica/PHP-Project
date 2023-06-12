@@ -30,30 +30,9 @@ class User extends Db_object {
 
 );
 
+    public function upload_photo() {
 
-    public function set_file($file) {
-
-        if(empty($file) || !$file || !is_array($file)) {
-            $this->errors[] = "There was no file uploaded here";
-            return false;
-        } elseif($file['error'] != 0) {
-            $this->errors[] = $this->upload_errors[$file['error']];
-            return false;
-        } else {
-
-        $this->user_image = basename($file['name']);
-        $this->tmp_path = $file['tmp_name'];
-        $this->type     = $file['type'];
-        $this->size     = $file['size'];
-  
-        }
-    }
-
-    public function save_user_and_image() {
-
-        if($this->id) {
-            $this->update();
-        } else {
+        
             if(!empty($this->errors)) {
                 return false;
             } 
@@ -71,17 +50,15 @@ class User extends Db_object {
 
             if(move_uploaded_file($this->tmp_path, $target_path)) {
                 
-                if ($this->create())  {
                     unset ($this->tmp_path);
                     return true;
-                }
 
             } else {
                 $this->errors[] = "The file directory probably does not have permission";
                 return false;
             }
 
-        }
+        
     }
 
     public function picture_path() {
