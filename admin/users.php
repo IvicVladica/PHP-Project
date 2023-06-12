@@ -43,9 +43,15 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">
-                        users
-                        <small>Subheading</small>
+                        Users
+                        
                     </h1>
+
+                    <a href="add_user.php" class="btn btn-primary"> Add User</a>
+
+
+
+
 
                     <div class="col-md-12">
 
@@ -65,7 +71,7 @@
 
                             <tr>
                                 <td><?php echo $user->id; ?> </td>
-                                <td><img class="admin-user-thumbnail user_image" src="<?php echo $user->image_path_and_placeholder(); ?>" alt=""></td>
+                                <td><img class="user_image" src="<?php echo $user->image_path_and_placeholder(); ?>" alt=""></td>
 
                                 <td><?php echo $user->username; ?>
                                     <div class="action_links">
