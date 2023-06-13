@@ -9,7 +9,6 @@ class Comment extends Db_object {
     public $author;
     public $body;
 
-
 public static function create_comment($photo_id, $author="John", $body="") {
 
     if(!empty($photo_id) && !empty($author) && !empty($body)) {

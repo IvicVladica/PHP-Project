@@ -12,7 +12,7 @@ $photo = Photo::find_by_id($_GET['id']);
 if(isset($_POST['submit'])) {
 
     $author = trim($_POST['author']);
-    $abody = trim($_POST['body']);
+    $body = trim($_POST['body']);
 
     $new_comment = Comment::create_comment($photo->id, $author, $body);
 
@@ -33,7 +33,7 @@ if(isset($_POST['submit'])) {
 
 }
 
-Comment::find_the_comments($photo->id);
+$comments = Comment::find_the_comments($photo->id);
 
 
 
@@ -170,19 +170,21 @@ Comment::find_the_comments($photo->id);
 
 
 
-
+                <?php foreach ($comments as $comment) : ?>
                 <!-- Comment -->
                 <div class="media">
                     <a class="pull-left" href="#">
                         <img class="media-object" src="http://placehold.it/64x64" alt="">
                     </a>
                     <div class="media-body">
-                        <h4 class="media-heading">Start Bootstrap
+                        <h4 class="media-heading"><?php echo $comment->author; ?>
                             <small>August 25, 2014 at 9:30 PM</small>
                         </h4>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                        <?php echo $comment->body; ?>
                     </div>
                 </div>
+
+                <?php endforeach;  ?>
 
 
             </div>
