@@ -1,4 +1,5 @@
 <?php include("includes/header.php"); ?>
+<?php include("includes/photo_library_modal.php"); ?>
 
 <?php
     if(!$session->is_signed_in()) { redirect("login.php");}
@@ -38,10 +39,8 @@
 
         }
            
-    
-
-
 ?>
+
 
 
         <!-- Navigation -->
@@ -75,7 +74,7 @@
 
                     <div class="col-md-6">
 
-                        <img class="img-responsive" src="<?php echo $user->image_path_and_placeholder(); ?>" alt="">
+                        <a href="#" data-toggle="modal" data-target="#photo-library"><img class="img-responsive" src="<?php echo $user->image_path_and_placeholder(); ?>" alt=""> </a>
                     
 
                     </div>
