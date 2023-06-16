@@ -8,7 +8,7 @@ $photos = Photo::find_all();
 
 
 
-<div class="modal" id="photo-library">
+<div class="modal fade" id="photo-library">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">

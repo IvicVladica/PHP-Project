@@ -113,7 +113,7 @@
                                  <p class="text">
                                    <span class="glyphicon glyphicon-calendar"></span> Uploaded on: April 22, 2030 @ 5:26
                                   </p>
-                                  <p class="text ">
+                                  <p class="text">
                                     Photo Id: <span class="data photo_id_box">34</span>
                                   </p>
                                   <p class="text">

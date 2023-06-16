@@ -116,7 +116,7 @@
 
                         <div class="form-group">
 
-                        <a class= "btn btn-danger" href="delete_user.php?id=<?php echo $user->id; ?>" ?>>Delete</a>
+                        <a id="user-id" class= "btn btn-danger" href="delete_user.php?id=<?php echo $user->id; ?>" ?>Delete</a>
                             
                         <input type="submit" name="update" class="btn btn-primary pull-right" value="Update">
 
