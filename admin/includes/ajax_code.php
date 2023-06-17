@@ -8,5 +8,11 @@ if(isset($_POST['image_name'])) {
 
 }
 
+if(isset($_POST['photo_id'])) {
+
+    Photo::display_sidebar_data($_POST['photo_id']);
+
+}
+
 
 ?>
