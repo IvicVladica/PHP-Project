@@ -15,6 +15,7 @@ $comment = Comment::find_by_id($_GET['id']);
 if($comment) {
 
     $comment->delete();
+    $session->message("The {$comment->id} comment has been deleted");
     redirect("comments.php");
 
 } else {

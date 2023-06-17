@@ -32,7 +32,7 @@ $photos = Photo::find_all();
                </div>
 
                     <!-- PHP LOOP HERE CODE HERE-->
-
+ 
                 <?php endforeach ?>   
 
              </div>

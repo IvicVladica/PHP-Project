@@ -25,13 +25,22 @@
                 $user->password = $_POST['password'];
 
             if(empty($_FILES['user_image'])) {
+
                 $user->save();
+                $session->message("The user has been updated");
+                redirect("users.php");
+                
+
             } else {
+
                 $user->set_file($_FILES['user_image']);
                 $user->upload_photo();
                 $user->save();
+                $session->message("The user has been updated");
 
-                redirect("edit_user.php?id={$user->id}");
+                // redirect("edit_user.php?id={$user->id}");
+                redirect("users.php");
+
             }
 
 
