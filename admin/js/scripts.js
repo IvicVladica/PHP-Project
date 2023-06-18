@@ -12,6 +12,8 @@ $(document).ready(function() {
     var image_name;
     var photo_id;
 
+    
+
     $(".modal_thumbnails").click(function(){
 
         $("#set_user_image").prop('disabled', false);
@@ -66,8 +68,22 @@ $(document).ready(function() {
     });
 
 
+/*************Edit Photo side bar **********/
+
+    $(".info-box-header").click(function(){
+
+    $(".inside").slideToggle("fast");
+
+    $("#toggle").toggleClass("glyphicon-menu-down glyphicon , glyphicon-menu-up glyphicon");
+
+
+    })
+
     tinymce.init({selector:'textarea'});
 
 });
+
+
+
 
 
