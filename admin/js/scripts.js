@@ -83,7 +83,7 @@ $(document).ready(function() {
 
     $(".delete_link").click(function(){
 
-        return confirm("Are you sure you want to dekete this item?");
+        return confirm("Are you sure you want to delete this item?");
 
         
         });
